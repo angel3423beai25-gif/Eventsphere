@@ -1,0 +1,35 @@
+EVENTSPHERE - START HERE
+
+A) EASIEST (Windows): double-click START-PROJECT.bat
+   It installs React and everything else the first time, then opens the website.
+   Keep that black window open while you use the site.
+
+B) USING VS CODE
+   1. Install Node.js LTS from https://nodejs.org (then restart VS Code).
+   2. File > Open Folder > choose the "eventsphere-react" folder (the one with package.json).
+   3. Terminal > New Terminal, then run:
+        npm install
+        npm run dev
+   4. Ctrl+Click the http://localhost:5173 link shown in the terminal.
+
+WHERE REACT COMES FROM
+React, React DOM, React Router, Redux Toolkit and React-Redux are listed in package.json.
+"npm install" downloads them into a node_modules folder (internet needed, 1-2 minutes).
+That folder is not inside the ZIP because it is created on your own computer.
+
+TROUBLESHOOTING
+- "npm is not recognized": install Node.js, then restart VS Code.
+- "vite is not recognized" / "Cannot find module 'react'": delete the node_modules folder,
+  then run npm install again. Or install by name:
+      npm install react react-dom react-router-dom @reduxjs/toolkit react-redux
+      npm install -D vite @vitejs/plugin-react
+- PowerShell says scripts are disabled: use the "Command Prompt" terminal in VS Code.
+- Blank page: press F12, open Console, and read the red error. The app also shows errors on screen.
+- Mac/Linux: run ./start-project.sh
+
+TRY THIS DEMO FLOW
+Home > Events (search/filter) > click RSVP (asks you to log in) > Sign up > RSVP again >
+Save (heart) an event > Host an event (live preview) > Dashboard (Going / Saved / Hosting / Profile) > toggle dark mode.
+
+NOTE: front-end college project. Accounts and events are stored in the browser (localStorage),
+which is not secure enough for real accounts.
